@@ -3,6 +3,8 @@
 *@
 @{
 }
+@model IEnumerable<MVCBooking.Models.HotelBooking>
+
 
 <h2> All Bookings </h2>
 
@@ -16,4 +18,13 @@
     </thead>
     <tbody>
         @foreach (var booking in Model)
+        {
+            <tr>
+                <td>@booking.ID</td>
+                <td>@booking.GuestName</td>
+                <td>@booking.RoomNumber</td>
+            </tr>
+        }
 </table>
+
+<a asp-controller="Booking" asp-action="Create">Create New Booking</a>

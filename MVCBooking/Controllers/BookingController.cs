@@ -18,5 +18,13 @@ namespace MVCBooking.Controllers
         {
             return View();
         }
+
+        public IActionResult CreateBooking(HotelBooking booking)
+
+        {
+            booking.ID = bookings.Count += 1;
+            bookings.Add(booking);
+            return RedirectToAction("Index");
+        }
     }
 }
