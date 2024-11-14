@@ -25,7 +25,7 @@ namespace MVCBooking.Controllers
 
         {
             
-            booking.ID = bookings.Count + 1;
+            booking.Id = bookings.Count + 1;
 
             bookings.Add(booking);
 
